@@ -1,0 +1,451 @@
+body {
+   font-family: sans-serif;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   width: 240px;
+   height: 350px;
+   margin-top: 40px;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: rgb(200 201 201);
+   border: 5px solid rgb(76 76 76);
+   border-left-color: white;
+   border-top-color: white;
+}
+
+.game-field {
+   width: 200px;
+   display: grid;
+   grid-template-columns: repeat(10, 20px);
+   justify-content: center;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: rgb(200 201 201);
+   border: 5px solid rgb(76 76 76);
+   border-right-color: white;
+   border-bottom-color: white;
+}
+
+.menu {
+   display: flex;
+   flex-direction: row;
+   width: 200px;
+   height: 60px;
+   justify-content: space-evenly;
+   align-items: center;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: rgb(200 201 201);
+   border: 5px solid rgb(76 76 76);
+   border-right-color: white;
+   border-bottom-color: white;
+}
+
+.time,
+.step,
+.reset {
+   width: 50px;
+   height: 40px;
+   background: rgb(0, 0, 0);
+   font-size: 34px;
+   font-family: VT323;
+   color:rgb(138, 1, 1);
+   text-align: center;
+   border: 3px solid rgb(76 76 76);
+   border-right-color: white;
+   border-bottom-color: white;
+}
+
+button {
+   height: 20px;
+   font-size: 16px;
+   background-color: rgb(200 201 201);
+   border: 3px solid rgb(76 76 76);
+   border-left-color: white;
+   border-top-color: white;
+}
+
+.no-active {
+   border: 1px solid rgb(76 76 76);
+}
+
+.bomb {
+   width: 20px;
+   height: 20px;
+   background-size: cover;
+   background-image: url('/src/img/icons8-морская-мина-40.png');
+   border: none;
+}
+
+.flag {
+   width: 20px;
+   height: 20px;
+   background-size: cover;
+   background-image: url('/src/img/icons8-флаг-2-16.png');
+}
+
+.one {
+   color: blue;
+   font-weight: bold;
+}
+
+.two {
+   color: green;
+   font-weight: bold;
+}
+
+.three {
+   color: red;
+   font-weight: bold;
+}
+
+.four {
+   color: rgb(2, 2, 92);
+   font-weight: bold;
+}
+
+.five {
+   color: rgb(1, 56, 1);
+   font-weight: bold;
+}
+
+.six {
+   color: rgb(138, 1, 1);
+   font-weight: bold;
+}
+
+.seven {
+   color: rgb(20, 200, 255);
+   font-weight: bold;
+}
+
+.eight {
+   color: rgb(255, 20, 165);
+   font-weight: bold;
+}
+
+.new-game {
+   position: absolute;
+   width: 160px;
+   height: 50px;
+   margin-left: 78%;
+   margin-top: 20px;
+   text-align: center;
+   font-family: VT323;
+   background-color: rgb(200 201 201);
+   border: 5px solid rgb(76 76 76);
+   border-left-color: white;
+   border-top-color: white;
+}
+
+.icon-settings {
+   width: 26px;
+   height: 26px;
+   position: absolute;
+   margin-left: 5%;
+   margin-top: 20px;
+   background-size: cover;
+   background-image: url('/src/img/icons8-настройки-26.png');
+   transition: 0.5s;
+}
+
+.icon-settings:hover {
+   cursor: pointer;
+   transform: rotate(45deg);
+   transition: 0.5s;
+}
+
+.settingsContainer {
+   position: absolute;
+   width: 215px;
+   height: 340px;
+   left: -100%;
+   background-color: rgb(200 201 201);
+   border: 5px solid rgb(76 76 76);
+   border-left-color: white;
+   border-top-color: white;
+   transition: 0.5s;
+}
+
+.settingsContainer-active {
+   left: 0;
+   transition: 0.5s;
+}
+
+.close-settings {
+   width: 30px;
+   height: 30px;
+   margin-left: 83%;
+   background-image: url('../img/icons8-крестик-30.png');
+   background-size: contain;
+}
+.themes-container,
+.volume-container,
+.level-container {
+   display: flex;
+   flex-direction: column;
+   height: 70px;
+   justify-content: space-around;
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+.themes-wrapper,
+.volume-wrapper {
+   display: flex;
+   justify-content: space-around;
+}
+
+.themes-dark {
+   background-color: rgb(0, 0, 0);
+}
+
+.level-wrapper {
+   display: flex;
+   flex-direction: row;
+}
+
+.container-medium {
+   width: 335px;
+   height: 420px;
+}
+
+.last-result {
+   height: 25px;
+   text-align: center;
+   transition: 0.5s;
+}
+
+.input-wrapper {
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+.input-mines {
+   width: 40px;
+}
+.game-field-medium {
+   grid-template-columns: repeat(15, 20px);
+   width: 300px;
+}
+
+.menu-medium {
+   height: 50px;
+   width: 300px;
+   justify-content: space-around;
+}
+
+.time-medium,
+.step-medium,
+.reset-medium {
+   width: 60px;
+}
+
+.container-heavy {
+   margin-top: 0px;
+   width: 535px;
+   height: 610px;
+}
+
+.game-field-heavy {
+   grid-template-columns: repeat(25, 20px);
+   width: 500px;
+}
+
+.menu-heavy {
+   height: 50px;
+   width: 500px;
+   justify-content: space-around;
+}
+
+.time-heavy,
+.step-heavy,
+.reset-heavy {
+   width: 80px;
+}
+
+.message-win {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   position: absolute;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 120px;
+   height: 140px;
+   width: 40%;
+   left: 30%;
+   text-align: center;
+   background-color: rgb(200 201 201);
+   border: 5px solid rgb(76 76 76);
+   border-left-color: white;
+   border-top-color: white;
+}
+
+.message-lose {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   position: absolute;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 120px;
+   height: 140px;
+   width: 40%;
+   left: 30%;
+   text-align: center;
+   background-color: rgb(200 201 201);
+   border: 5px solid rgb(76 76 76);
+   border-left-color: white;
+   border-top-color: white;
+}
+
+.text-win {
+   margin: 0;
+}
+
+.btn-win {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 50px;
+   width: 42%;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   background-color: rgb(200 201 201);
+   border: 5px solid rgb(76 76 76);
+   border-left-color: white;
+   border-top-color: white;
+}
+
+.message-lose-wrapper {
+   display: flex;
+   flex-direction: row;
+}
+
+.message-lose-ok,
+.message-lose-cancel {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 50px;
+   width: 30%;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   background-color: rgb(200 201 201);
+   border: 5px solid rgb(76 76 76);
+   border-left-color: white;
+   border-top-color: white;
+}
+
+.list-container {
+   position: absolute;
+   left: 29%;
+   width: 40%;
+   background-color: rgb(200 201 201);
+   border: 5px solid rgb(76 76 76);
+   border-left-color: white;
+   border-top-color: white;
+}
+
+.close-last-results {
+   width: 30px;
+   height: 30px;
+   margin-left: 83%;
+   background-image: url('../img/icons8-крестик-30.png');
+   background-size: contain;
+}
+
+.new-game:hover,
+.btn-reset:hover,
+.close-settings:hover,
+.themes-text:hover,
+.level-text:hover,
+.input-mines:hover,
+.volume-text:hover,
+.last-result:hover,
+.message-lose-ok:hover,
+.message-lose-cancel:hover,
+.btn-win:hover,
+.close-last-results:hover,
+.themes-wrapper:hover,
+.level-wrapper:hover,
+.volume-wrapper:hover,
+input:hover,
+.game-field > button:hover {
+   cursor: pointer;
+}
+
+.new-game:hover {
+   opacity: 0.7;
+}
+
+.last-result:hover {
+   font-weight: bold;
+   color: blue;
+   transition: 0.5s;
+}
+
+.hidden {
+   display: none;
+}
+
+@media (max-width: 960px) {
+
+   .game-field-heavy {
+      grid-template-columns: repeat(25, 15px);
+      width: 380px;
+   }
+
+   .game-field-heavy > button {
+      height: 15px;
+      border: 2px solid rgb(76 76 76);
+      border-left-color: white;
+      border-top-color: white;
+   }
+
+   .menu-heavy {
+      width: 380px;
+   }
+
+   .container-heavy {
+      margin-top: 20px;
+      width: 410px;
+      height: 530px;
+   }
+
+   .game-field-heavy > .bomb {
+      width: 15px;
+      height: 15px;
+   }
+   
+   .game-field-heavy > .flag {
+      width: 15px;
+      height: 15px;
+   }
+
+}
+
+@media (max-width: 768px) {
+   
+   .new-game {
+      display: none;
+   }
+
+   .btn-reset {
+      position: absolute;
+      margin-left: 88%;
+      margin-top: 20px;
+      width: 40px;
+      height: 40px;
+      background-size: cover;
+      background-image: url('/src/img/icons8-повторяющееся-уведомление-40.png');  
+   }
+
+}
