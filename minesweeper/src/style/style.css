@@ -358,8 +358,13 @@ button {
    width: 30px;
    height: 30px;
    margin-left: 83%;
+   margin-top: 10px;
    background-image: url('../img/icons8-крестик-30.png');
    background-size: contain;
+}
+
+.list-container ol {
+   margin-top: 0px;
 }
 
 .new-game:hover,

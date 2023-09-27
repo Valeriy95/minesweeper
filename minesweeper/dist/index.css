@@ -537,8 +537,13 @@ button {
    width: 30px;
    height: 30px;
    margin-left: 83%;
+   margin-top: 10px;
    background-image: url(assets/icons8-%D0%BA%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA-30.png);
    background-size: contain;
+}
+
+.list-container ol {
+   margin-top: 0px;
 }
 
 .new-game:hover,
